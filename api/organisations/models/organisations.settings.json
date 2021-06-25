@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "organisations",
+  "info": {
+    "name": "Organisations"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "pictures": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "contactInfo": {
+      "type": "string",
+      "required": true
+    },
+    "users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "organisation"
+    },
+    "volunteers": {
+      "via": "organisations",
+      "collection": "volunteers"
+    },
+    "projects": {
+      "via": "organisation",
+      "collection": "projects"
+    }
+  }
+}

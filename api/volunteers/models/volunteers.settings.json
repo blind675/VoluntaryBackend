@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "volunteers",
+  "info": {
+    "name": "Volunteers",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "volunteer"
+    },
+    "intrests": {
+      "type": "text"
+    },
+    "isActive": {
+      "type": "boolean"
+    },
+    "lastTaskCompletedAt": {
+      "type": "datetime"
+    },
+    "organisations": {
+      "collection": "organisations",
+      "via": "volunteers",
+      "dominant": true
+    },
+    "activeTasks": {
+      "collection": "tasks",
+      "via": "volunteers"
+    }
+  }
+}

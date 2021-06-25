@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tasks",
+  "info": {
+    "name": "Tasks"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "volunteersNeeded": {
+      "type": "integer",
+      "required": true,
+      "default": 1
+    },
+    "location": {
+      "type": "string"
+    },
+    "dueDate": {
+      "type": "datetime"
+    },
+    "isCompleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "links": {
+      "type": "string"
+    },
+    "viewers": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "task"
+    },
+    "volunteers": {
+      "via": "activeTasks",
+      "collection": "volunteers",
+      "dominant": true
+    }
+  }
+}
