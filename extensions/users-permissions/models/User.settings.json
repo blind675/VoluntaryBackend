@@ -64,8 +64,8 @@
       "model": "volunteers"
     },
     "organization": {
-      "model": "organisations",
-      "via": "users"
+      "via": "users",
+      "model": "organisations"
     },
     "task": {
       "via": "viewers",

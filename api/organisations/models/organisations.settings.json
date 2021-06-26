@@ -27,7 +27,7 @@
         "images"
       ],
       "plugin": "upload",
-      "required": true,
+      "required": false,
       "pluginOptions": {}
     },
     "pictures": {
@@ -42,7 +42,7 @@
     },
     "contactInfo": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "volunteers": {
       "via": "organisations",
