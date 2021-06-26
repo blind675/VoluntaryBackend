@@ -13,9 +13,9 @@
   "pluginOptions": {},
   "attributes": {
     "user": {
+      "via": "volunteer",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "volunteer"
+      "model": "user"
     },
     "intrests": {
       "type": "text"
@@ -27,13 +27,30 @@
       "type": "datetime"
     },
     "organisations": {
-      "collection": "organisations",
       "via": "volunteers",
+      "collection": "organisations",
       "dominant": true
     },
     "activeTasks": {
       "collection": "tasks",
       "via": "volunteers"
+    },
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "contactData": {
+      "type": "string"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }

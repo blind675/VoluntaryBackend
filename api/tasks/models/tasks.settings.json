@@ -38,9 +38,9 @@
       "type": "string"
     },
     "viewers": {
+      "via": "task",
       "plugin": "users-permissions",
-      "collection": "user",
-      "via": "task"
+      "collection": "user"
     },
     "volunteers": {
       "via": "activeTasks",

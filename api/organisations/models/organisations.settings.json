@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "organisations",
   "info": {
-    "name": "Organisations"
+    "name": "Organisations",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -11,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true
     },
@@ -43,11 +44,6 @@
       "type": "string",
       "required": true
     },
-    "users": {
-      "plugin": "users-permissions",
-      "collection": "user",
-      "via": "organisation"
-    },
     "volunteers": {
       "via": "organisations",
       "collection": "volunteers"
@@ -55,6 +51,11 @@
     "projects": {
       "via": "organisation",
       "collection": "projects"
+    },
+    "users": {
+      "via": "organization",
+      "plugin": "users-permissions",
+      "collection": "user"
     }
   }
 }

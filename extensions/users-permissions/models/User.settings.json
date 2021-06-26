@@ -59,29 +59,13 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "name": {
-      "type": "string"
-    },
-    "contactData": {
-      "type": "string"
-    },
-    "image": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
-    },
     "volunteer": {
       "via": "user",
       "model": "volunteers"
     },
-    "organisation": {
-      "via": "users",
-      "model": "organisations"
+    "organization": {
+      "model": "organisations",
+      "via": "users"
     },
     "task": {
       "via": "viewers",

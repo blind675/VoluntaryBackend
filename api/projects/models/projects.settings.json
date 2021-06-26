@@ -17,8 +17,8 @@
       "required": true
     },
     "organisation": {
-      "model": "organisations",
-      "via": "projects"
+      "via": "projects",
+      "model": "organisations"
     },
     "subproject": {
       "model": "projects",
