@@ -131,7 +131,7 @@ module.exports = {
       let user = await strapi.query('user', 'users-permissions').create(params);
 
       let newRole;
-      if (params.isOrganization) {
+      if (params.isOrganisation) {
         newRole = await strapi
           .query('role', 'users-permissions')
           .findOne({type: 'organization'}, []);
@@ -140,8 +140,7 @@ module.exports = {
         // create organisation
         const validData = await strapi.entityValidator.validateEntityCreation(
           strapi.models.organisations,
-          params,
-          {isDraft}
+          params
         );
         const organization = await strapi.query('organisations').create(validData);
 
