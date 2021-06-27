@@ -32,8 +32,8 @@
       "dominant": true
     },
     "activeTasks": {
-      "collection": "tasks",
-      "via": "volunteers"
+      "via": "volunteers",
+      "collection": "tasks"
     },
     "name": {
       "type": "string",

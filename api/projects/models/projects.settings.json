@@ -27,6 +27,10 @@
     "project": {
       "model": "projects",
       "via": "subproject"
+    },
+    "tasks": {
+      "via": "project",
+      "collection": "tasks"
     }
   }
 }
